@@ -1,0 +1,9 @@
+.env
+.env.local
+data/chroma/
+__pycache__/
+*.pyc
+*.pkl
+*.pyo
+mlruns/
+.claude/

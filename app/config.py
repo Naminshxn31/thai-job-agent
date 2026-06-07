@@ -9,7 +9,7 @@ from functools import lru_cache
 class Settings(BaseSettings):
     # Gemini
     gemini_api_key: str
-    gemini_model: str = "gemini-2.0-flash"
+    gemini_model: str = "gemini-2.5-flash"
     gemini_embedding_model: str = "gemini-embedding-001"
 
     # ChromaDB
@@ -42,7 +42,7 @@ def get_settings() -> Settings:
         if hasattr(st, "secrets") and "GEMINI_API_KEY" in st.secrets:
             return Settings(
                 gemini_api_key=st.secrets["GEMINI_API_KEY"],
-                gemini_model=st.secrets.get("GEMINI_MODEL", "gemini-2.0-flash"),
+                gemini_model=st.secrets.get("GEMINI_MODEL", "gemini-2.5-flash"),
                 gemini_embedding_model=st.secrets.get("GEMINI_EMBEDDING_MODEL", "gemini-embedding-001"),
             )
     except Exception:

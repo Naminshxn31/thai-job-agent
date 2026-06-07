@@ -180,14 +180,14 @@ pytest tests/ -v
 
 ## 📸 Screenshots
 
-### CV Upload & Analysis
-Upload your CV → AI reads it (even scanned PDFs) → shows your profile summary, skills, and recommendations.
+### หน้าหลัก — อัพโหลด CV
+![Upload CV](docs/screenshots/upload-page.png)
 
-### Job Matching
-Each job gets a match score with specific reasons:
-- ✅ Why you're a good fit
-- ⚠️ What skills you're missing
-- 🔗 Direct link to apply on JobsDB
+### ผลการวิเคราะห์ — โปรไฟล์ & ทักษะ
+![CV Analysis](docs/screenshots/cv-analysis.png)
+
+### จับคู่งาน — Match Score & เหตุผล
+![Job Matching](docs/screenshots/job-matching.png)
 
 ---
 
@@ -196,7 +196,7 @@ Each job gets a match score with specific reasons:
 | Variable | Required | Default | Description |
 |---|---|---|---|
 | `GEMINI_API_KEY` | Yes | — | Google Gemini API key |
-| `GEMINI_MODEL` | No | `gemini-2.0-flash` | Gemini model for chat/analysis |
+| `GEMINI_MODEL` | No | `gemini-2.5-flash` | Gemini model for chat/analysis |
 | `GEMINI_EMBEDDING_MODEL` | No | `gemini-embedding-001` | Embedding model |
 | `CHROMA_PERSIST_DIR` | No | `./data/chroma` | ChromaDB storage path |
 | `LOG_LEVEL` | No | `INFO` | Logging level |
